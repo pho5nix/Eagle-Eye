@@ -10,8 +10,18 @@
 
 **Eagle-Eye** is an autonomous AI-powered penetration testing reconnaissance agent built on [OpenClaw](https://openclaw.ai).
 
-Running on a lean Ubuntu 24.04 Proxmox VM, Eagle-Eye executes a full 9-phase recon pipeline autonomously: OSINT → Subdomain Enumeration → Live Host Discovery → Port Scanning → Service Fingerprinting → URL Crawling → Vulnerability Scanning → Report Generation → Operator Notification. It uses **claude-sonnet-4-5** as its primary reasoning engine for complex decisions, with a local **Qwen2.5:7b** LLM fallback (via Ollama, zero cost) for repetitive subtasks — keeping API usage lean and sessions efficient.
+Running on a lean Ubuntu 24.04 Proxmox VM, Eagle-Eye executes a full 9-phase recon pipeline autonomously: 
+- OSINT
+- Subdomain Enumeration
+- Live Host Discovery
+- Port Scanning
+- Service Fingerprinting
+- -URL Crawling
+- -Vulnerability Scanning
+- Report Generation
+- Operator Notification
 
+It uses **claude-sonnet-4-5** as its primary reasoning engine for complex decisions, with a local **Qwen2.5:7b** LLM fallback (via Ollama, zero cost) for repetitive subtasks — keeping API usage lean and sessions efficient.
 The agent doesn't just run tools. It reads per-tool decision trees, evaluates output quality, selects the right command variant for the situation, and retries with a different strategy when something fails — all without operator intervention.
 
 ### Key Features
