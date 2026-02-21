@@ -1,0 +1,1 @@
+Example of scanning logs by each tool
