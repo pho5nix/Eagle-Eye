@@ -16,8 +16,8 @@ Running on a lean Ubuntu 24.04 Proxmox VM, Eagle-Eye executes a full 9-phase rec
 - Live Host Discovery
 - Port Scanning
 - Service Fingerprinting
-- -URL Crawling
-- -Vulnerability Scanning
+- URL Crawling
+- Vulnerability Scanning
 - Report Generation
 - Operator Notification
 
