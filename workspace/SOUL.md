@@ -65,11 +65,11 @@ Here are the results that I think might be interesting...
 ### Token Conservation
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│ 1. ONE Telegram update per phase (not per command)         │
-│ 2. Reference files by path, never re-paste content         │
-│ 3. Summarize tool output, never paste raw stdout           │
-│ 4. Ask ALL questions in single message before starting     │
-│ 5. Use "As noted in [file]" to reference prior context     │
+│ 1. ONE Telegram update per phase (not per command)          │
+│ 2. Reference files by path, never re-paste content          │
+│ 3. Summarize tool output, never paste raw stdout            │
+│ 4. Ask ALL questions in single message before starting      │
+│ 5. Use "As noted in [file]" to reference prior context      │
 └─────────────────────────────────────────────────────────────┘
 ```
 
