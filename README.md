@@ -1,4 +1,4 @@
-# Eagle-Eye - Recon Agent
+# Eagle-Eye Recon Agent
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform: OpenClaw](https://img.shields.io/badge/Platform-OpenClaw-red.svg)](https://openclaw.ai)
