@@ -125,24 +125,59 @@ chmod 600 ~/.openclaw/workspace/tools/*.md
 Place your `openclaw.json` at `~/.openclaw/openclaw.json`. Minimum required config:
 
 ```json
-{
-  "agents": {
-    "defaults": {
-      "model": {
-        "primary": "anthropic/claude-sonnet-4-5",
-        "fallbacks": [
-          "anthropic/claude-haiku-4-5-20251001",
-          "ollama/qwen2.5:7b"
-        ]
-      },
-      "workspace": "~/user.openclaw/workspace",
-      "skills": ""~/user/.openclaw/workspace/skills"
+ "auth": {
+    "profiles": {
+      "anthropic:default": {
+        "provider": "anthropic",
+        "mode": "token"
+      }
     }
   },
-  "tools": {
-    "exec": { "ask": "on-miss" }
-  }
-}
+  "models": {
+    "providers": {
+      "ollama": {
+        "baseUrl": "http://OLLAMA-HOST-IP:11434/v1",
+        "apiKey": "ollama",
+        "api": "openai",
+        "models": [
+          {
+            "id": "qwen2.5:7b",
+            "name": "Qwen 2.5 7B",
+            "reasoning": false,
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            }
+           }
+        ]
+      }
+    }
+  },
+  "agents": {
+     "defaults": {
+       "model": {
+         "primary": "anthropic/claude-sonnet-4-5",
+         "fallbacks": [
+           "ollama/qwen2.5:7b"
+         ]
+       },
+       "models": {
+         "anthropic/claude-sonnet-4-5": {
+           "alias": "sonnet"
+         },
+         "anthropic/claude-haiku-4-5": {
+           "alias": "haiku"
+         },
+         "ollama/qwen2.5:7b": {
+           "alias": "qwen"
+         }
+       }
+     }
+  },
+
 ```
 
 > **Security**: `chmod 600 ~/.openclaw/openclaw.json` — this file contains your API keys and gateway token.
