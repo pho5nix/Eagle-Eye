@@ -21,8 +21,8 @@ Running on a lean Ubuntu 24.04 Proxmox VM, Eagle-Eye executes a full 9-phase rec
 - Report Generation
 - Operator Notification
 
-It uses **claude-sonnet-4-5** as its primary reasoning engine for complex decisions, with a local **Qwen2.5:7b** LLM fallback (via Ollama, zero cost) for repetitive subtasks — keeping API usage lean and sessions efficient.
-The agent doesn't just run tools. It reads per-tool decision trees, evaluates output quality, selects the right command variant for the situation, and retries with a different strategy when something fails — all without operator intervention.
+It uses **claude-sonnet-4-5** as its primary reasoning engine for complex decisions, with a local **Qwen2.5:7b** LLM fallback (via Ollama, zero cost) for repetitive subtasks, keeping API usage lean and sessions efficient.  
+The agent doesn't just run tools. It reads per-tool decision trees, evaluates output quality, selects the right command variant for the situation, and retries with a different strategy when something fails. All without operator intervention.
 
 ### Key Features
 
