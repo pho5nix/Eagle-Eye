@@ -19,7 +19,7 @@
 | **OS**             | Ubuntu 24.04 LTS            |
 | **Primary Model**  | anthropic/claude-haiku-4-5  |
 | **Elevated Model** | anthropic/claude-sonnet-4-5 |
-| **Repetitive Tasks\Routines Model | ollama/qwen2.5:7b |
+| **Repetitive Tasks\Routines Model** | ollama/qwen2.5:7b |
 | **Channel**        | Telegram                    |
 | **Plan**           | Claude Pro                  |
 
