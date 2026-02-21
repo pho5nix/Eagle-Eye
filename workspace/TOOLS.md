@@ -31,7 +31,7 @@ wkhtmltopdf qpdf pdftotext tesseract
 |Type|Path Pattern|
 |---|---|
 |Scan output|`workspace/scans/{target}/{domain}-{tool}-{YYYY-MM-DD}.{ext}`|
-|Reports|`workspace/reports/{domain}-summary-{YYYY-MM-DD}.pdf`|
+|Reports|`workspace/reports/{domain}-summary-{YYYY-MM-DD}.md`|
 |Targets|`target/TARGETS.md`|
 
 ---
