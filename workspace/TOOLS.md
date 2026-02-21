@@ -9,12 +9,6 @@ subfinder httpx nuclei naabu dnsx katana amass
 ffuf gobuster nmap whatweb nikto shodan gau waybackurls
 ```
 
-### Wrappers (~/.local/bin)
-
-```bash
-theHarvester dnsrecon shodan wafw00f
-```
-
 ### PDF/Reporting Tools
 
 ```bash
