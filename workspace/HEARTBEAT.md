@@ -1,6 +1,6 @@
 # EagleEye — Heartbeat
 
-## System Monitoring
+## System Monitoring - ALWAYS use the ollama/qwen2.5:7b model
 
 ### Disk Usage Check
 ```
