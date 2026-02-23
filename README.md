@@ -1,6 +1,5 @@
 # Eagle-Eye Recon Agent
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform: OpenClaw](https://img.shields.io/badge/Platform-OpenClaw-red.svg)](https://openclaw.ai)
 [![Model: claude-sonnet-4-5](https://img.shields.io/badge/Model-claude--sonnet--4--5-blue.svg)](https://anthropic.com)
 [![Local LLM: Qwen2.5:7b](https://img.shields.io/badge/LocalLLM-Qwen2.5%3A7b-green.svg)](https://ollama.ai)
@@ -272,7 +271,7 @@ Eagle-Eye | Phase 2 Complete
 Target: example.com
 Subdomains: 147 found, 89 validated
 Next: Live host probing
-⏱ Runtime: 4m 32s
+Runtime: 4m 32s
 ```
 
 Critical findings trigger an immediate alert:
