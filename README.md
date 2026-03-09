@@ -37,11 +37,11 @@ The agent doesn't just run tools. It reads per-tool decision trees, evaluates ou
 ## Architecture
 
 ```
-Operator (pho5nix)
+Operator
       │
       │ Telegram
       ▼
- Eagle-Eye Agent (agent-007)
+ Eagle-Eye Agent
  Ubuntu 24.04 LTS | OpenClaw
       │
       ├── Primary:  claude-sonnet-4-5  (Anthropic Pro)
@@ -102,12 +102,12 @@ This design means the agent recovers from common field conditions without paging
 ## Prerequisites
 
 - **Proxmox VE** (or any hypervisor) — this guide targets Proxmox but the agent runs on any Ubuntu 24.04 host.
-- **Ubuntu 24.04 LTS** VM: 16GB RAM, 8 vCPU, 60GB disk (agent-007).
+- **Ubuntu 24.04 LTS** VM: 4GB-12GB RAM, 4-8 vCPU, 60GB disk.
 - **OpenClaw** installed and configured.
 - **Anthropic Claude Pro** plan (for claude-sonnet-4-5 primary model).
-- **Ollama** (optional, for local Qwen2.5:7b fallback — separate VM or same host).
+- **Ollama** (optional, for local Qwen2.5:7b fallback - separate VM).
 - **Telegram Bot** configured for operator notifications.
-- All recon tools installed in PATH (see Tools section below).
+- All recon tools installed in PATH.
 
 ## Installation
 
@@ -170,6 +170,7 @@ Place your `openclaw.json` at `~/.openclaw/openclaw.json`. Minimum required conf
        "model": {
          "primary": "anthropic/claude-sonnet-4-5",
          "fallbacks": [
+           "anthropic/claude-haiku-4-5"
            "ollama/qwen2.5:7b"
          ]
        },
@@ -189,7 +190,7 @@ Place your `openclaw.json` at `~/.openclaw/openclaw.json`. Minimum required conf
 
 ```
 
-> **Security**: `chmod 600 ~/.openclaw/openclaw.json` — this file contains your API keys and gateway token.
+> **Security**: `chmod 600 ~/.openclaw/openclaw.json` — this file contains your API keys and gateway token. Consider create .env file for credentials and set the variables in openclaw.json.  
 
 ### 4. Install Recon Tools
 
@@ -243,8 +244,8 @@ ollama pull qwen2.5:7b
 ### Starting a Recon Run
 
 ```bash
-# Open OpenClaw and let the agent load its workspace
-openclaw
+# Start OpenClaw and let the agent load its workspace
+openclaw gateway start
 
 # The agent will:
 # 1. Read AGENTS.md, SOUL.md, TOOLS.md, USER.md (brain stem — always loaded)
@@ -336,8 +337,8 @@ MIT License. See [LICENSE](LICENSE) for details.
 
 ## Acknowledgments
 
-- Built on [OpenClaw](https://openclaw.ai) — the agentic AI framework that makes autonomous tool orchestration possible.
-- Powered by [Anthropic Claude](https://anthropic.com) (claude-sonnet-4-5) as the primary reasoning engine.
+- Built on [OpenClaw](https://openclaw.ai)
+- Powered by [Anthropic Claude](https://anthropic.com)
 - Local intelligence via [Qwen2.5](https://qwen.readthedocs.io) running on [Ollama](https://ollama.ai).
 - Recon toolkit by [ProjectDiscovery](https://projectdiscovery.io) — subfinder, httpx, nuclei, naabu, dnsx, katana, amass.
 - Part of the **pho5nix** security toolkit ecosystem alongside [Red-Threat-Redemption](https://github.com/pho5nix/Red-Threat-Redemption) (open-source SIEM stack).
